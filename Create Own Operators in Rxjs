@@ -1,0 +1,18 @@
+export class OwnOperatorsComponent implements OnInit {
+  DoubleOperator() {
+    return map(value => value * 2);
+  }
+   
+  constructor() {
+
+ const source2$ = from(allBooks);
+ source2$.subscribe(book => console.log(book.title));
+
+ const s1 = of(1, 2, 3, 4);
+  s1.pipe(
+          this.DoubleOperator()
+        ).subscribe(s => console.log(s));
+
+  }
+  
+ }
